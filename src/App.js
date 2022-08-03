@@ -1,7 +1,14 @@
+import { Routes, Route } from 'react-router-dom'
 import './App.scss'
 
 function App() {
-  return <div className="App"></div>
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />} />
+      </Routes>
+    </>
+  )
 }
 
 export default App
