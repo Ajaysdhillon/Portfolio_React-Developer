@@ -4,17 +4,13 @@ import { Link, NavLink } from 'react-router-dom'
 import LogoS from '../../assets/images/logo-s.png'
 import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faLinkedin,
-  faGithub,
-  faYoutube,
-  faSkype,
-} from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import {
   faHome,
   faUser,
   faEnvelope,
   faSuitcase,
+  faCode,
 } from '@fortawesome/free-solid-svg-icons'
 const Sidebar = () => {
   return (
@@ -61,6 +57,15 @@ const Sidebar = () => {
             rel="noreferrer"
           >
             <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.codingninjas.com/codestudio/profile/3546661b-90d1-4136-9d1a-d8700c3f107d"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faCode} color="#4d4d4e" />
           </a>
         </li>
       </ul>
