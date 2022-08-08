@@ -88,5 +88,10 @@
         content: 'CONTACT';
       }
     }
+    a.active {
+      svg {
+        color: #ffd700;
+      }
+    }
   }
 }
