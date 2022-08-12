@@ -8,7 +8,7 @@ const Home = () => {
         <h1>
           Hi, <br /> I'm
           <img src={LogoTitle} alt="developer" />
-          Ajay Singh Dhillon
+          jay Singh
           <br />
           Web Developer
         </h1>
