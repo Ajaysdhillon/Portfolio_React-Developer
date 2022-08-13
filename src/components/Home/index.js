@@ -1,7 +1,7 @@
 import LogoTitle from '../../assets/images/portfolio-logo-img.png'
 import { Link } from 'react-router-dom'
 import './index.scss'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -23,6 +23,12 @@ const Home = () => {
     'r',
     '.',
   ]
+
+  /*useEffect(() => {
+    return setTimeout(() => {
+      setLetterClass('text-animate-hover')
+    }, 4000)
+  }, [])*/
 
   return (
     <div className="container home-page">
@@ -46,7 +52,7 @@ const Home = () => {
             idx={22}
           />
         </h1>
-        <h2>Frontend Developer</h2>
+        <h2>Frontend Developer / Reactjs Expert</h2>
         <Link to="/contact" className="flat-button">
           CONTACT ME
         </Link>
