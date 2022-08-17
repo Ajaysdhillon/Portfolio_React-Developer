@@ -1,5 +1,3 @@
-import './index.scss'
-import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import {
   faAngular,
@@ -9,15 +7,24 @@ import {
   faJsSquare,
   faReact,
 } from '@fortawesome/free-brands-svg-icons'
+import Loader from 'react-loaders'
+import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import './index.scss'
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+
   useEffect(() => {
-    setTimeout(() => {
+    let timeoutId = setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 4000)
+
+    return () => {
+      clearTimeout(timeoutId)
+    }
   }, [])
+
   return (
     <>
       <div className="container about-page">
@@ -40,14 +47,15 @@ const About = () => {
           </p>
           <p>
             If I need to define myself in one sentence that would be a family
-            person, a sports fanatic, a team player and tech-obsessed!!!
+            person, a sports fanatic and tech-obsessed!!!
           </p>
         </div>
+
         <div className="stage-cube-cont">
           <div className="cubespinner">
-            {/*<div className="face1">
-              <FontAwesomeIcon icon={fa} color="#DD0031" />
-  </div>*/}
+            <div className="face1">
+              <FontAwesomeIcon icon={faAngular} color="#DD0031" />
+            </div>
             <div className="face2">
               <FontAwesomeIcon icon={faHtml5} color="#F06529" />
             </div>
