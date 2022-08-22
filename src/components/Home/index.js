@@ -60,7 +60,6 @@ const Home = () => {
         </Link>
       </div>
       <Logo />
-      <Loader type="pacman" />
     </div>
   )
 }
